@@ -1,0 +1,2373 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konga HP Shop In Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+      }
+
+      html,
+      body,
+      div,
+      span,
+      applet,
+      object,
+      iframe,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      pre,
+      a,
+      abbr,
+      acronym,
+      address,
+      big,
+      cite,
+      code,
+      del,
+      em,
+      img,
+      ins,
+      kbd,
+      q,
+      s,
+      samp,
+      small,
+      strike,
+      strong,
+      sub,
+      sup,
+      tt,
+      var,
+      b,
+      u,
+      i,
+      center,
+      dl,
+      dt,
+      dd,
+      ol,
+      ul,
+      li,
+      fieldset,
+      form,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td,
+      article,
+      aside,
+      canvas,
+      details,
+      embed,
+      figure,
+      figcaption,
+      footer,
+      header,
+      menu,
+      nav,
+      output,
+      section,
+      summary,
+      time,
+      mark,
+      audio,
+      video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+      }
+
+      .LogoStrip_logoStripContainer__hP2vz {
+        background-color: #f6f6f6;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        min-height: 2.3125rem !important;
+        padding: 0.5rem !important;
+        gap: 1.5rem;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+      }
+
+      .section-reset {
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+
+      section {
+        padding: 0 !important;
+        margin: 0 !important;
+        min-height: 0 !important;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #fff;
+        padding: 0;
+        margin: 0;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1400px;
+        padding: .5rem 0rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 1rem 0.5rem;
+        }
+      }
+
+      .container > * {
+        width: 100%;
+      }
+
+      /* --- Top Banner --- */
+      .top-banner {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .placeholder-banner {
+        height: 80px; /* As per spec 1400x80 */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        border: 1px dashed #ccc;
+      }
+
+      /* --- Main KV --- */
+      .main-kv {
+        width: 100%;
+        aspect-ratio: 3 / 1;
+        background-color: #808080; /* Grey placeholder */
+        color: white;
+        text-align: center;
+        margin-bottom: 20px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .placeholder-kv {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.2rem;
+        border: 1px dashed #ccc;
+      }
+
+      /* Mobile KV Styles */
+      .kv-mobile {
+        display: block;
+        height: 100%;
+        width: 100%;
+        animation: kv-fade-mobile 8s infinite;
+      }
+
+      .kv-desktop {
+        display: none;
+        height: 100%;
+        width: 100%;
+        animation: kv-fade-desktop 8s infinite;
+      }
+
+      /* KV Auto-play animations */
+      @keyframes kv-fade-mobile {
+        0% {
+          opacity: 1;
+        }
+        45% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        95% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes kv-fade-desktop {
+        0% {
+          opacity: 0;
+        }
+        45% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        95% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      /* --- Brand & CTA Section --- */
+      .brand-cta-wrapper {
+        display: flex;
+        flex-direction: column; /* Stack on mobile */
+        gap: 20px;
+        padding-bottom: 40px;
+      }
+
+      /* Brands */
+      .brands-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 2 columns on mobile */
+        gap: 10px;
+        width: 100%;
+      }
+
+      .brand-box {
+        aspect-ratio: 1 / 1; /* Square boxes */
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .placeholder-box {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border: 1px dashed #ccc;
+        padding: 10px;
+      }
+
+      /* CTAs */
+      .cta-section {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+      }
+
+      .cta-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        color: black;
+        text-decoration: none;
+        padding: 15px 20px;
+        border-radius: 8px;
+        font-weight: bold;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.2s;
+      }
+
+      .cta-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      }
+
+      .cta-btn .icon {
+        margin-right: 10px;
+      }
+
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 2rem 0;
+        text-align: center;
+        margin-top: auto;
+      }
+
+      /* --- Desktop / Larger Screens --- */
+      @media (min-width: 1024px) {
+
+        /* KV Desktop Switch */
+        .kv-mobile {
+          display: none !important;
+          animation: none !important;
+        }
+
+        .kv-desktop {
+          display: block;
+          height: 100%;
+          width: 100%;
+          animation: none !important;
+          opacity: 1 !important;
+        }
+
+        /* Brand & CTA Layout */
+        .brand-cta-wrapper {
+          flex-direction: row; /* Side by side */
+          align-items: stretch; /* Match heights if needed */
+        }
+
+        .brands-section {
+          flex: 2; /* 2/3 width */
+          grid-template-columns: repeat(4, 1fr); /* 4 in a row */
+          margin-right: 20px;
+        }
+
+        .cta-section {
+          flex: 1; /* 1/3 width */
+          justify-content: center; /* Align to center */
+          padding-top: 0;
+        }
+      }
+
+      /* --- Shop by Category Section (Bento Grid) --- */
+      .shop-by-category-section {
+        padding: 0 !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .shop-by-category-header {
+        background-color: #494c6e;
+        border-radius: 12px 12px 0 0;
+        color: #fff;
+        padding: 1rem 2.5rem;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        width: 100%;
+        max-width: 1400px;
+        box-sizing: border-box;
+      }
+
+      .shop-category-container {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+      }
+
+      .shop-category-container > * {
+        max-width: 1400px;
+        width: 100%;
+      }
+
+      .shop-category-grid {
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .shop-category-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        background-color: #fff;
+        border-radius: 0 0 24px 24px;
+        gap: 2rem;
+        padding: 2rem;
+        width: 100%;
+      }
+
+      .shop-category-item {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .shop-category-card {
+        aspect-ratio: 1 / 1;
+        background-color: #ffffff;
+        border: 1px solid #f0f0f0;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        font-weight: 700;
+        color: #fff;
+        text-align: center;
+        padding: 0;
+        font-size: 0.95rem;
+        line-height: 1.4;
+        position: relative;
+      }
+
+      .shop-category-card::before {
+        content: "";
+        position: absolute;
+        inset: -1px;
+        border: 1.5px solid #a50034;
+        border-radius: 12px;
+        pointer-events: none;
+        z-index: 2;
+        filter: drop-shadow(0 0 3px rgba(165, 0, 52, 0.5));
+        transition: -webkit-mask-position 0.6s ease-in-out, mask-position 0.6s ease-in-out;
+        -webkit-mask-image: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff);
+        -webkit-mask-size: 50px 50px, 50px 50px;
+        -webkit-mask-repeat: no-repeat, no-repeat;
+        -webkit-mask-position: 100% 0%, 0% 100%;
+        mask-image: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff);
+        mask-size: 50px 50px, 50px 50px;
+        mask-repeat: no-repeat, no-repeat;
+        mask-position: 100% 0%, 0% 100%;
+      }
+
+      .shop-category-card:hover::before {
+        -webkit-mask-position: 0% 0%, 100% 100%;
+        mask-position: 0% 0%, 100% 100%;
+      }
+
+      .shop-category-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 12px;
+        pointer-events: none;
+        z-index: 3;
+        background: linear-gradient(105deg, transparent 20%, rgba(255, 255, 255, 0.6) 50%, transparent 80%) no-repeat;
+        background-size: 200% 100%;
+        background-position: 200% 0;
+        transition: background-position 0.6s ease-in-out;
+      }
+
+      .shop-category-card:hover::after {
+        background-position: -100% 0;
+      }
+
+      .shop-category-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        border-radius: 12px;
+      }
+
+      .shop-category-card:hover {
+        transform: translateY(-8px);
+      }
+
+      .shop-category-label {
+        text-align: center;
+        font-weight: 500;
+        font-size: 1.15rem;
+        color: #000;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+      }
+
+      /* Tablet Responsive */
+      @media (max-width: 1024px) {
+        .shop-category-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1.5rem;
+        }
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        .shop-category-grid {
+          grid-template-columns: 1fr;
+          gap: 1.25rem;
+        }
+
+        .shop-category-container {
+          padding: 1.5rem 1.5rem;
+        }
+      }
+
+      /* --- Best Sellers Section --- */
+      .best-sellers-section {
+        padding: 20px 0 !important;
+        display: flex;
+        justify-content: center;
+      }
+
+      .best-sellers-header {
+        background-color: #494c6e;
+        border-radius: 12px 12px 0 0;
+        color: #fff;
+        padding: 1rem 2rem;
+        font-size: 2rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .best-sellers-title {
+        font-size: 1.2rem;
+        text-align: left;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+
+      .flash-more {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: white;
+        font-size: 0.95rem;
+        font-weight: 400;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        text-transform: none;
+        letter-spacing: normal;
+      }
+
+      .flash-more:hover {
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .flash-more .icon-circle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #fff;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+      }
+
+      .flash-more:hover .icon-circle {
+        transform: translateX(3px);
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+
+      /* --- Promotional Banners Section --- */
+      .banner-section {
+        padding: 40px 0 !important;
+        display: flex;
+        justify-content: center;
+      }
+
+      .banner-section-container {
+        width: 100%;
+        padding: 1.5rem 2.5rem;
+        display: flex;
+        justify-content: center;
+      }
+
+      .banner-section-container > * {
+        max-width: 1400px;
+        width: 100%;
+      }
+
+      .banner-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        width: 100%;
+      }
+
+      .banner-card {
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        aspect-ratio: 2 / 1;
+        background-size: cover;
+        background-position: center;
+        transition: transform 0.3s ease;
+      }
+
+      .banner-card:hover {
+        transform: translateY(-5px);
+      }
+
+      /* Overlay for text readability */
+      .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 50%;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 60%);
+        z-index: 1;
+      }
+
+      /* Card content */
+      .card-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        z-index: 2;
+      }
+
+      .card-content h2 {
+        color: white;
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin: 0;
+        padding: 0;
+      }
+
+      .card-content p {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 0.95rem;
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+      }
+
+      .card-btn {
+        margin-top: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      /* Theme: Dark */
+      .banner-card.theme-dark .card-btn {
+        background-color: white;
+        color: #000;
+      }
+
+      .banner-card.theme-dark .card-btn:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+        transform: scale(1.05);
+      }
+
+      /* Theme: Light */
+      .banner-card.theme-light .card-btn {
+        background-color: #000;
+        color: white;
+      }
+
+      .banner-card.theme-light .card-btn:hover {
+        background-color: #333;
+        transform: scale(1.05);
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        .banner-section-container {
+          padding: 1.5rem 2rem;
+        }
+
+        .banner-grid {
+          grid-template-columns: 1fr;
+          gap: 1.25rem;
+        }
+
+        .banner-card {
+          aspect-ratio: 2 / 1;
+        }
+
+        .card-content {
+          padding: 1.5rem;
+        }
+
+        .card-content h2 {
+          font-size: 1.4rem;
+        }
+
+        .card-content p {
+          font-size: 0.85rem;
+        }
+
+        .card-btn {
+          padding: 0.65rem 1.25rem;
+          font-size: 0.85rem;
+        }
+      }
+
+      /* --- Product Grid Section --- */
+      .product-section {
+        padding: 10px 2.5rem !important;
+        margin-top: 2rem !important;
+        display: flex;
+        justify-content: center;
+      }
+
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        max-width: 1400px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .product-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: #ffffff;
+        border: 1px solid #f0f0f0;
+        border-radius: 12px;
+        gap: 1.15rem;
+        padding: 1.5rem 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        justify-content: space-between;
+        min-height: 100%;
+      }
+
+      .product-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      }
+
+      .product-card h3 {
+        font-size: 1.325rem;
+        font-weight: 400;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .product-card img {
+        max-height: 180px;
+        width: auto;
+        object-fit: contain;
+        display: block;
+      }
+
+      .product-btn {
+        background-color: #a50034;
+        color: white;
+        border: none;
+        padding: 0.75rem 2.5rem;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 400;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .product-btn:hover {
+        background-color: #85002a;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Tablet Responsive */
+      @media (max-width: 1024px) {
+        .product-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1.5rem;
+        }
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        .product-section {
+          padding: 60px 1.5rem !important;
+          margin-top: 1rem !important;
+        }
+
+        .product-grid {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+
+        .product-card {
+          gap: 1.25rem;
+          padding: 0.75rem;
+        }
+
+        .product-card h3 {
+          font-size: 1rem;
+        }
+
+        .product-card img {
+          max-height: 160px;
+        }
+
+        .product-btn {
+          padding: 0.65rem 2rem;
+          font-size: 0.85rem;
+        }
+      }
+
+      /* --- Marquee Section --- */
+      :root {
+        --marquee-gap: 2rem;
+      }
+
+      .marquee-section {
+        padding: 60px 2.5rem !important;
+        background-color: white;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .marquee-section > * {
+        max-width: 1400px;
+        width: 100%;
+      }
+
+      .marquee-section h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #000;
+        text-align: center;
+        margin-bottom: 40px;
+        padding: 0;
+      }
+
+      .marquee-container {
+        width: 100%;
+        overflow: hidden;
+        background-color: transparent;
+      }
+
+      .marquee-track {
+        display: flex;
+        gap: var(--marquee-gap);
+        width: max-content;
+        animation: scroll 4s linear infinite;
+      }
+
+      .marquee-content {
+        display: flex;
+        gap: var(--marquee-gap);
+        align-items: center;
+        flex-shrink: 0;
+      }
+
+      .marquee-content img {
+        height: 200px;
+        width: auto;
+        object-fit: contain;
+        display: block;
+        transition: transform 0.3s ease;
+      }
+
+      .marquee-content img:hover {
+        transform: scale(1.08);
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(calc(-50% - (var(--marquee-gap) / 2)));
+        }
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        :root {
+          --marquee-gap: 1rem;
+        }
+
+        .marquee-section {
+          padding: 40px 1.5rem !important;
+        }
+
+        .marquee-section h2 {
+          font-size: 1.5rem;
+          margin-bottom: 30px;
+        }
+
+        .marquee-content img {
+          height: 120px;
+        }
+      }
+
+      /* --- YouTube Section --- */
+      .youtube-section {
+        padding: 60px 2.5rem !important;
+        display: flex;
+        justify-content: center;
+      }
+
+      @media (max-width: 768px) {
+        .youtube-section {
+            padding: 0 !important;
+            display: flex;
+            justify-content: center;
+        }
+      }
+
+
+      .youtube-container {
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .youtube-embed {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      .youtube-embed iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      /* Old Marquee Section --- */
+      .marquee-header {
+        background: linear-gradient(
+          to right,
+          #f9a024,
+          #ed017f,
+          #ed017f,
+          #ed017f,
+          #f9a024
+        );
+        color: white;
+        padding: 15px 20px;
+        text-align: center;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+
+      .marquee-title {
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+
+      .marquee-wrapper {
+        width: 100%;
+        overflow: hidden;
+        background-color: white;
+        padding: 20px 0;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+      }
+
+      .marquee-track {
+        display: flex;
+        gap: 20px;
+        width: max-content;
+        animation: scroll 40s linear infinite; /* Adjust speed as needed */
+      }
+
+      .marquee-item {
+        flex-shrink: 0;
+        width: 150px; /* Adjust item width */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .marquee-text {
+        font-size: 0.9rem;
+        color: #333;
+        font-weight: 500;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+      }
+
+      .marquee-img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        background-color: #eee;
+        border-radius: 8px;
+        display: block;
+        object-fit: cover;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(
+            -50%
+          ); /* Move by half the total width (one full set) */
+        }
+      }
+
+      /* Pause on hover for better UX */
+      .marquee-wrapper:hover .marquee-track {
+        animation-play-state: paused;
+      }
+
+      /* Global Transitions for Interactive Elements */
+      a,
+      button,
+      .icon-circle-black,
+      .icon-circle-white,
+      .icon-circle-pink,
+      .icon-circle,
+      .flash-product-card,
+      .kitchen-item,
+      .bulk-item,
+      .fitness-item,
+      .home-item,
+      .deal-item,
+      .placeholder-img {
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      /* Icon/Button Hovers */
+      .icon-circle-black:hover,
+      .icon-circle-white:hover,
+      .icon-circle-pink:hover,
+      .icon-circle:hover,
+      .kitchen-more:hover .icon-circle-black,
+      .bulk-more:hover .icon-circle-white,
+      .flash-more:hover .icon-circle {
+        transform: scale(1.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Card/Item Hovers - Lift & Shadow */
+      .flash-product-card:hover .product-img-wrapper {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .deal-item:hover .placeholder-img {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .kitchen-item:hover .kitchen-img-wrapper,
+      .fitness-item:hover .fitness-img,
+      .bulk-item:hover .bulk-img-wrapper {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Image Zoom Effects (requires overflow: hidden on parent) */
+      .home-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Bulk Item Specific */
+      .bulk-item:hover {
+        background-color: #fafafa; /* Slight highlight */
+      }
+
+      /* Add cursor pointer to non-link interactive items */
+      .flash-product-card,
+      .kitchen-item,
+      .bulk-item,
+      .fitness-item,
+      .home-item {
+        cursor: pointer;
+      }
+
+      /* --- Official Brands Section --- */
+      .official-brands-section {
+        padding: 20px 0 !important;
+      }
+
+      /* --- Promo Banners Section --- */
+      .promo-banners-section {
+        padding: 20px 0 !important;
+      }
+
+      .promo-banners-grid {
+        display: grid;
+        grid-template-columns: 1fr; /* Mobile: Stacked */
+        gap: 20px;
+      }
+
+      .promo-banner-item {
+        width: 100%;
+        min-height: 200px;
+      }
+
+      .promo-banner-img {
+        width: 100%;
+        aspect-ratio: 665 / 440;
+        background-color: #eee;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .promo-banner-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s ease;
+      }
+
+      .promo-banner-img:hover img {
+        transform: scale(1.05);
+      }
+
+      .promo-banner-img .placeholder-text {
+        color: #333;
+        font-weight: bold;
+        text-align: center;
+        line-height: 1.4;
+      }
+
+      /* Desktop Layout */
+      @media (min-width: 768px) {
+        .promo-banners-grid {
+          grid-template-columns: repeat(2, 1fr); /* Desktop: Half and half */
+        }
+
+        .promo-banner-item {
+          min-height: auto;
+        }
+      }
+
+      /* --- SEO Content Section --- */
+      .seo-content-section {
+        background-color: #f8f9fa;
+        padding: 40px 2.5rem !important;
+        display: flex;
+        justify-content: center;
+      }
+
+      .seo-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 2rem 2rem;
+      }
+
+      .seo-container > h2 {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #333;
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+
+      .seo-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .seo-content p {
+        font-size: 0.875rem;
+        color: #555;
+        line-height: 1.6;
+        text-align: justify;
+        margin: 0;
+      }
+
+      .seo-content strong {
+        color: #000;
+        font-weight: 600;
+      }
+
+      /* Tablet Responsive */
+      @media (max-width: 992px) {
+        /* Keep consistent typography sizes */
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        .seo-container {
+          padding: 1.25rem 1rem;
+        }
+      }
+
+      /* --- SEO Text Section --- */
+      .seo-text-section {
+        padding: 40px 0 !important;
+        background-color: white;
+        border-top: 1px solid #eee;
+      }
+
+      .seo-title {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #000;
+        margin-bottom: 20px;
+      }
+
+      .seo-content {
+        font-size: 0.875rem;
+        color: #666; /* Grey text */
+        line-height: 1.8;
+        text-align: justify;
+      }
+
+      .seo-content p {
+        margin-bottom: 15px;
+      }
+
+      .seo-content a {
+        color: #666;
+        text-decoration: underline;
+        transition: color 0.3s ease;
+      }
+
+      .seo-content a:hover {
+        color: #a50034; /* Blue on hover */
+      }
+
+      .seo-content strong {
+        color: #333;
+      }
+
+      /* Remove underline from specific See More links */
+      .flash-more {
+        text-decoration: none;
+      }
+
+      .flash-more:hover {
+        text-decoration: none;
+      }
+
+      /* Animated Border Utility */
+      .animated-border {
+        position: relative;
+        z-index: 0;
+        padding: 2px;
+        overflow: hidden;
+        border-radius: 8px;
+      }
+
+      .animated-border::before {
+        content: "";
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        top: -50%;
+        left: -50%;
+        z-index: -2;
+        background: conic-gradient(
+          transparent,
+          transparent,
+          transparent,
+          #e2b25f
+        );
+        animation: rotate-border 4s linear infinite;
+      }
+
+      .animated-border::after {
+        content: "";
+        position: absolute;
+        inset: 2px;
+        background: white;
+        z-index: -1;
+        border-radius: 6px;
+      }
+
+      .animated-border img {
+        z-index: 1;
+        position: relative;
+        border-radius: 6px;
+      }
+
+      /* --- Navbar --- */
+      .navbar {
+        background-color: #ffffff;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        width: 100%;
+        border-bottom: 1px solid #eaeaea;
+      }
+
+      .navbar-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0.65rem 1rem;
+        gap: 2rem;
+        max-width: 1400px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+
+
+      .navbar-logo {
+        height: 64px;
+        display: flex;
+        align-items: center;
+      }
+
+      .navbar-logo img {
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+      }
+
+      .nav-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 2.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .nav-items {
+        display: flex;
+        list-style: none;
+        gap: 2.5rem;
+        margin: 0;
+        padding: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .nav-items li {
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-items a {
+        color: #000;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        font-weight: 400;
+        font-size: 1rem;
+      }
+
+      .nav-items a:hover {
+        color: #666;
+      }
+
+      .cta-button {
+        background-color: #a50034;
+        color: #fff;
+        border: none;
+        padding: 0.85rem 1.75rem;
+        border-radius: 4px;
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        white-space: nowrap;
+      }
+
+      .cta-button:hover {
+        background-color: #85002a;
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        .navbar {
+          position: static;
+        }
+
+        .navbar-container {
+          flex-direction: column;
+          gap: 1.5rem;
+          padding: 1.5rem 2rem;
+        }
+
+        .navbar-logo {
+          width: 100%;
+          justify-content: center;
+        }
+
+        .nav-wrapper {
+          width: 100%;
+          flex-direction: column;
+          gap: 1.25rem;
+        }
+
+        .nav-items {
+          width: 100%;
+          gap: 0.75rem;
+          justify-content: center;
+        }
+
+        .nav-items li:not(:last-child) {
+          border-right: 1px solid #ccc;
+          padding-right: 0.75rem;
+        }
+
+        .nav-items li:not(:last-child)::after {
+          content: "";
+          margin-left: 0.75rem;
+        }
+
+        .cta-button {
+          width: 100%;
+        }
+      }
+
+      /* --- Carousel Styles --- */
+      .carousel-container {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 7 / 2;
+        background-color: #f0f0f0;
+        border-radius: 24px;
+        overflow: hidden;
+        margin: 0;
+      }
+
+      .carousel-wrapper {
+        width: 100%;
+        padding: 1.5rem 2.5rem;
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+      }
+
+      .carousel-wrapper > * {
+        max-width: 1400px;
+        width: 100%;
+      }
+
+      /* Hide radio inputs */
+      .carousel-container input[type="radio"] {
+        display: none;
+      }
+
+      /* Slides container */
+      .slides-container {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s ease-in-out;
+        animation: autoplay 24s infinite linear;
+      }
+
+      /* Individual slides */
+      .slide {
+        flex: 0 0 100%;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+
+      .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-color: #f0f0f0;
+        opacity: 0;
+        animation: fadeIn 0.6s ease forwards;
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* Auto-play animation */
+      @keyframes autoplay {
+        0% {
+          transform: translateX(0%);
+        }
+        16.666% {
+          transform: translateX(0%);
+        }
+        16.667% {
+          transform: translateX(-100%);
+        }
+        33.333% {
+          transform: translateX(-100%);
+        }
+        33.334% {
+          transform: translateX(-200%);
+        }
+        50% {
+          transform: translateX(-200%);
+        }
+        50.001% {
+          transform: translateX(-300%);
+        }
+        66.666% {
+          transform: translateX(-300%);
+        }
+        66.667% {
+          transform: translateX(-400%);
+        }
+        83.333% {
+          transform: translateX(-400%);
+        }
+        83.334% {
+          transform: translateX(-500%);
+        }
+        100% {
+          transform: translateX(-500%);
+        }
+      }
+
+      /* Radio button checked states - manual control */
+      #slide1:checked ~ .slides-container {
+        transform: translateX(0%);
+      }
+
+      #slide2:checked ~ .slides-container {
+        transform: translateX(-100%);
+      }
+
+      #slide3:checked ~ .slides-container {
+        transform: translateX(-200%);
+      }
+
+      #slide4:checked ~ .slides-container {
+        transform: translateX(-300%);
+      }
+
+      #slide5:checked ~ .slides-container {
+        transform: translateX(-400%);
+      }
+
+      #slide6:checked ~ .slides-container {
+        transform: translateX(-500%);
+      }
+
+      /* Pause animation on interaction */
+      .carousel-container:hover .slides-container {
+        animation-play-state: paused;
+      }
+
+      .carousel-container input:checked ~ .slides-container {
+        animation-play-state: paused;
+      }
+
+      /* Pagination container */
+      .pagination {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 12px;
+        z-index: 10;
+      }
+
+      /* Pagination labels (dots) */
+      .pagination label {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.9);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border: 2px solid transparent;
+      }
+
+      .pagination label:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+
+      /* Active dot */
+      #slide1:checked ~ .pagination label[for="slide1"],
+      #slide2:checked ~ .pagination label[for="slide2"],
+      #slide3:checked ~ .pagination label[for="slide3"],
+      #slide4:checked ~ .pagination label[for="slide4"],
+      #slide5:checked ~ .pagination label[for="slide5"],
+      #slide6:checked ~ .pagination label[for="slide6"] {
+        background-color: #a50034;
+      }
+
+      /* Navigation arrows (optional, for visual enhancement) */
+      .carousel-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 48px;
+        height: 48px;
+        background-color: rgba(255, 255, 255, 0.25);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        z-index: 20;
+        line-height: 1;
+        font-weight: 400;
+        letter-spacing: 0;
+      }
+
+      .carousel-arrow:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+        transform: translateY(-50%) scale(1.15);
+      }
+
+      .carousel-arrow.prev {
+        left: 20px;
+      }
+
+      .carousel-arrow.next {
+        right: 20px;
+      }
+
+      /* Mobile scroll-snap behavior */
+      @media (max-width: 768px) {
+        .carousel-wrapper {
+          padding: 0.5rem 1rem;
+        }
+
+        .carousel-container {
+          aspect-ratio: 2 / 1;
+        }
+
+        .shop-category-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .slides-container {
+          scroll-snap-type: x mandatory;
+          overflow-x: auto;
+          overflow-y: hidden;
+          scroll-behavior: smooth;
+          animation: none;
+        }
+
+        .slides-container::-webkit-scrollbar {
+          display: none;
+        }
+
+        .slides-container {
+          scrollbar-width: none;
+        }
+
+        .slide {
+          scroll-snap-align: start;
+          scroll-snap-stop: always;
+        }
+
+        .carousel-arrow {
+          display: none;
+        }
+
+        .pagination {
+          display: flex;
+          gap: 10px;
+        }
+      }
+
+      .large-banner-section {
+        width: 100%;
+        padding: 0 !important;
+        display: flex;
+        justify-content: center;
+      }
+
+      /* Banner Carousel Container */
+      .banner-carousel-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .banner-carousel-container {
+        position: relative;
+        width: 100%;
+        max-width: 1400px;
+        aspect-ratio: 1400 / 400;
+        background-color: #f0f0f0;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      /* Hide radio inputs */
+      .banner-carousel-container input[type="radio"] {
+        display: none;
+      }
+
+      /* Banner slides container */
+      .banner-slides-container {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        animation: banner-autoplay 15s infinite linear;
+        will-change: transform;
+      }
+
+      /* Individual banner slides */
+      .banner-slide {
+        flex: 0 0 100%;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .banner-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        opacity: 0;
+        animation: fadeIn 0.8s ease forwards;
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* Banner auto-play animation */
+      @keyframes banner-autoplay {
+        0% {
+          transform: translateX(0%);
+        }
+        30% {
+          transform: translateX(0%);
+        }
+        33% {
+          transform: translateX(-100%);
+        }
+        63% {
+          transform: translateX(-100%);
+        }
+        66% {
+          transform: translateX(-200%);
+        }
+        96% {
+          transform: translateX(-200%);
+        }
+        100% {
+          transform: translateX(-200%);
+        }
+      }
+
+      /* Radio button checked states - manual control */
+      #banner1:checked ~ .banner-slides-container {
+        transform: translateX(0%) !important;
+        animation: none !important;
+      }
+
+      #banner2:checked ~ .banner-slides-container {
+        transform: translateX(-100%) !important;
+        animation: none !important;
+      }
+
+      #banner3:checked ~ .banner-slides-container {
+        transform: translateX(-200%) !important;
+        animation: none !important;
+      }
+
+      #banner4:checked ~ .banner-slides-container {
+        transform: translateX(-300%) !important;
+        animation: none !important;
+      }
+
+      #banner5:checked ~ .banner-slides-container {
+        transform: translateX(-400%) !important;
+        animation: none !important;
+      }
+
+      #banner6:checked ~ .banner-slides-container {
+        transform: translateX(-500%) !important;
+        animation: none !important;
+      }
+
+      /* Pause animation on interaction */
+      .banner-carousel-container:hover .banner-slides-container {
+        animation-play-state: paused;
+      }
+
+      .banner-carousel-container input:checked ~ .banner-slides-container {
+        animation-play-state: paused;
+      }
+
+      /* Banner pagination container */
+      .banner-pagination {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 12px;
+        z-index: 10;
+      }
+
+      /* Banner pagination dots */
+      .banner-pagination label {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.4);
+        cursor: pointer;
+        transition: width 0.3s ease, border-radius 0.3s ease, background-color 0.3s ease;
+      }
+
+      .banner-pagination label:hover {
+        background-color: rgba(255, 255, 255, 0.7);
+      }
+
+      /* Active dot */
+      #banner1:checked ~ .banner-pagination label[for="banner1"],
+      #banner2:checked ~ .banner-pagination label[for="banner2"],
+      #banner3:checked ~ .banner-pagination label[for="banner3"],
+      #banner4:checked ~ .banner-pagination label[for="banner4"],
+      #banner5:checked ~ .banner-pagination label[for="banner5"],
+      #banner6:checked ~ .banner-pagination label[for="banner6"] {
+        width: 18px;
+        border-radius: 3px;
+        background-color: #ffffff;
+      }
+
+      /* Banner navigation arrows */
+      .banner-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 48px;
+        height: 48px;
+        background-color: rgba(0, 0, 0, 0.3);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        z-index: 20;
+        line-height: 1;
+        font-weight: 400;
+        letter-spacing: 0;
+      }
+
+      .banner-arrow:hover {
+        background-color: rgba(0, 0, 0, 0.6);
+        transform: translateY(-50%) scale(1.15);
+      }
+
+      .banner-prev {
+        left: 20px;
+      }
+
+      .banner-next {
+        right: 20px;
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        .banner-carousel-container {
+          aspect-ratio: 2 / 1;
+        }
+
+        .banner-arrow {
+          display: none;
+        }
+
+        .banner-pagination {
+          gap: 10px;
+        }
+      }
+
+      .button_button__cpnXl {
+          background-color: transparent !important;
+          color: #a50034 !important;
+          border: 1px solid #a50034 !important;
+      }
+
+      .button_button__cpnXl:hover {
+          background-color: #a50034 !important;
+          color: #fff !important;
+          border: 2px solid #a50034 !important;
+      }
+
+
+      .ListingCard_soldBy__shCRn a {
+          color: #a50034 !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+      <nav class="navbar-container">
+        <div class="navbar-logo">
+          <img src="https://static1.squarespace.com/static/502a8efb84ae42cbccf920c4/t/5e81f31ee1a6fc55ddb18131/1588614641811/LG-Logo.png?format=1500w" alt="HP Logo" />
+        </div>
+        <div class="nav-wrapper">
+          <ul class="nav-items">
+            <li><a href="#">Home Appliances</a></li>
+            <li><a href="#">Televisions</a></li>
+            <li><a href="#">Air Conditioners</a></li>
+            <li><a href="#">Audio</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Large Banner Carousel Section -->
+    <section class="large-banner-section section-reset">
+      <div class="container">
+        <div class="banner-carousel-wrapper">
+          <div class="banner-carousel-container">
+            <!-- Radio inputs for state management -->
+            <input type="radio" id="banner1" name="banner-carousel" checked />
+            <input type="radio" id="banner2" name="banner-carousel" />
+            <input type="radio" id="banner3" name="banner-carousel" />
+            <input type="radio" id="banner4" name="banner-carousel" />
+            <input type="radio" id="banner5" name="banner-carousel" />
+            <input type="radio" id="banner6" name="banner-carousel" />
+
+            <!-- Banners container -->
+            <div class="banner-slides-container">
+              <a href="#" class="banner-slide">
+                <img src="https://www-konga-com-res.cloudinary.com/image/upload/v1789060669/landingPages/2026%20Marketing/LGSIS/HS_Banner.jpg" alt="LG Banner 1" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+              </a>
+              <a href="#" class="banner-slide">
+                <img src="https://www-konga-com-res.cloudinary.com/image/upload/v1789060669/landingPages/2026%20Marketing/LGSIS/Ref_banner.jpg" alt="LG Banner 2" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+              </a>
+              <a href="#" class="banner-slide">
+                <img src="https://www-konga-com-res.cloudinary.com/image/upload/v1789060670/landingPages/2026%20Marketing/LGSIS/TV_banner.jpg" alt="LG Banner 3" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+              </a>
+              <a href="#" class="banner-slide">
+                <img src="https://www-konga-com-res.cloudinary.com/image/upload/v1789060670/landingPages/2026%20Marketing/LGSIS/WM_banner.jpg" alt="LG Banner 4" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+              </a>
+              <a href="#" class="banner-slide">
+                <img src="https://www-konga-com-res.cloudinary.com/image/upload/v1699026353/landingPages/LG%20page/LG.jpg" alt="LG Banner 5" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+              </a>
+              <a href="#" class="banner-slide">
+                <img src="https://www-konga-com-res.cloudinary.com/image/upload/v1706698699/landingPages/LG%20page/LG_Konga_Banner_849_x_338_px.jpg" alt="LG Banner 6" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+              </a>
+            </div>
+
+            <!-- Pagination dots -->
+            <div class="banner-pagination">
+              <label for="banner1"></label>
+              <label for="banner2"></label>
+              <label for="banner3"></label>
+              <label for="banner4"></label>
+              <label for="banner5"></label>
+              <label for="banner6"></label>
+            </div>
+
+            <!-- Navigation arrows -->
+            <label class="banner-arrow banner-prev" for="banner1" aria-label="Previous banner">&lt;</label>
+            <label class="banner-arrow banner-next" for="banner2" aria-label="Next banner">&gt;</label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    
+    <!-- Shop By Category Section -->
+    <section class="shop-by-category-section section-reset" style="margin-top: 2rem !important;">
+      <div class="shop-by-category-header" style="background-color: #a50034; border-radius: 12px 12px 0 0;">Shop By Category</div>
+      <div class="shop-category-container">
+        <div class="shop-category-grid">
+          <!-- Card 1 -->
+          <a href="#" class="shop-category-item">
+            <div class="shop-category-card" style="background-color: #f0f0f0;">
+              <img src="home-appliances.png" alt="Home Appliances" />
+            </div>
+            <div class="shop-category-label">Home Appliances</div>
+          </a>
+          <!-- Card 2 -->
+          <a href="#" class="shop-category-item">
+            <div class="shop-category-card" style="background-color: #f0f0f0;">
+              <img src="televisions.png" alt="Televisions" />
+            </div>
+            <div class="shop-category-label">Televisions</div>
+          </a>
+          <!-- Card 3 -->
+          <a href="#" class="shop-category-item">
+            <div class="shop-category-card" style="background-color: #f0f0f0;">
+              <img src="air%20conditioners.png" alt="Air Conditioners" />
+            </div>
+            <div class="shop-category-label">Air Conditioners</div>
+          </a>
+          <!-- Card 4 -->
+          <a href="#" class="shop-category-item">
+            <div class="shop-category-card" style="background-color: #f0f0f0;">
+              <img src="audio.png" alt="Audio" />
+            </div>
+            <div class="shop-category-label">Audio</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Home Appliances Section -->
+    <section class="shop-by-category-section section-reset" style="margin-top: 0.5rem !important;">
+      <div class="shop-by-category-header" style="background-color: #a50034; border-radius: 12px 12px 0 0;">
+        <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+          <span>Home Appliances</span>
+          <a href="https://www.konga.com/search?q=LG+Home+Appliances" class="flash-more" style="color: #ffffff;">
+            see more
+            <span class="icon-circle" style="background-color: #ffffff;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="#a50034" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="shop-category-container">
+        <div style="background-color: #ffffff; border-radius: 0 0 24px 24px; padding: 2rem; width: 100%;">
+          <div class="product-grid" style="grid-template-columns: repeat(4, 1fr); gap: 2rem; width: 100%;">
+            <!-- Must Have 1 -->
+            <article class="product-card">
+              <h3>Chest Freezer</h3>
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/X/D/229301_1781857339.jpg" alt="Chest Freezer" />
+              <a href="https://www.konga.com/search?q=Chest+Freezer" class="product-btn">Buy Now</a>
+            </article>
+            <!-- Must Have 2 -->
+            <article class="product-card">
+              <h3>Refrigerator</h3>
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/D/O/229301_1773215313.jpg" alt="Refrigerator" />
+              <a href="https://www.konga.com/search?q=Refrigerator" class="product-btn">Buy Now</a>
+            </article>
+            <!-- Must Have 3 -->
+            <article class="product-card">
+              <h3>Dehumidifier</h3>
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/D/229301_1779269083.jpg" alt="Dehumidifier" />
+              <a href="https://www.konga.com/search?q=Dehumidifier" class="product-btn">Buy Now</a>
+            </article>
+            <!-- Must Have 4 -->
+            <article class="product-card">
+              <h3>Washing Machine</h3>
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/L/R/229301_1747391983.jpg" alt="Washing Machine" />
+              <a href="https://www.konga.com/search?q=WashingMachine" class="product-btn">Buy Now</a>
+            </article>
+          </div>
+        </div>
+      </div>
+
+    <!-- Televisions Section -->
+    <section class="shop-by-category-section section-reset" style="margin-top: 0.5rem !important;">
+      <div class="shop-by-category-header" style="background-color: #a50034; border-radius: 12px 12px 0 0;">
+        <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+          <span>Televisions</span>
+          <a href="https://www.konga.com/search?q=LG+Televisions" class="flash-more" style="color: #ffffff;">
+            see more
+            <span class="icon-circle" style="background-color: #ffffff;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="#a50034" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="shop-category-container">
+        <div style="background-color: #ffffff; border-radius: 0 0 24px 24px; padding: 2rem; width: 100%;">
+          <div class="product-grid" style="grid-template-columns: repeat(4, 1fr); gap: 2rem; width: 100%;">
+            <!-- Must Have 1 -->
+            <article class="product-card">
+              <h3>OLED AI TVs</h3>
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/U/E/229301_1737796237.jpg" alt="OLED AI TVs" />
+              <a href="#" class="product-btn">Buy Now</a>
+            </article>
+            <!-- Must Have 2 -->
+            <article class="product-card">
+              <h3>QNED AI TVs</h3>
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/U/N/229301_1737795278.jpg" alt="QNED AI TVs" />
+              <a href="#" class="product-btn">Buy Now</a>
+            </article>  
+            <!-- Must Have 3 -->
+            <article class="product-card">
+              <h3>NanoCell AI TVs</h3>
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/L/T/229301_1737793568.jpg" alt="NanoCell AI TVs" />
+              <a href="#" class="product-btn">Buy Now</a>
+            </article>
+            <!-- Must Have 4 -->
+            <article class="product-card">
+              <h3>UHD AI TVs</h3>
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/L/G/_1742567801.png" alt="UHD TVs" />
+              <a href="https://www.konga.com/product/lg-43-uhd-ai-think-4k-smart-satellite-av-3-hdmi-1-usb-dtv-tv-43lr6000-2-years-warranty-6393068?cid=7773" class="product-btn">Buy Now</a>
+            </article>
+          </div>
+        </div>
+      </div>
+
+    <!-- Air Conditioners Section -->
+    <section class="shop-by-category-section section-reset" style="margin-top: 0.5rem !important;">
+      <div class="shop-by-category-header" style="background-color: #a50034; border-radius: 12px 12px 0 0;">
+        <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+          <span>Air Conditioners</span>
+          <a href="https://www.konga.com/search?q=LG+Air+Conditioners" class="flash-more" style="color: #ffffff;">
+            see more
+            <span class="icon-circle" style="background-color: #ffffff;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="#a50034" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Audio Section -->
+    <section class="shop-by-category-section section-reset" style="margin-top: 0.5rem !important;">
+      <div class="shop-by-category-header" style="background-color: #a50034; border-radius: 12px 12px 0 0;">
+        <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+          <span>Audio</span>
+          <a href="https://www.konga.com/search?q=LG+Audio" class="flash-more" style="color: #ffffff;">
+            see more
+            <span class="icon-circle" style="background-color: #ffffff;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="#a50034" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- YouTube Section -->
+    <section class="youtube-section section-reset" style="margin-top: 2rem !important;">
+      <div class="youtube-container">
+        <div class="youtube-embed">
+          <iframe src="https://www.youtube.com/embed/ItFq0Xm46iU" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p style="text-align: center; margin-top: 1.5rem; font-weight: 400; font-size: 1rem; color: #000;">New Product Alert: Discover the latest LG innovation designed to elevate your everyday life. Watch now!</p>
+      </div>
+    </section>
+
+    <!-- Shop All Section -->
+    <section class="shop-by-category-section section-reset" style="margin-top: 2rem !important;">
+      <div class="shop-by-category-header" style="background-color: #a50034; border-radius: 12px 12px 0 0;">
+        <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+          <span>Shop All</span>
+          <a href="https://www.konga.com/search?search=HP" class="flash-more">
+            See more
+            <span class="icon-circle" style="background-color: #ffffff;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Featured Banners Section -->
+    <section class="shop-by-category-section section-reset" style="margin-top: 2rem !important;">
+      <div class="shop-category-container">
+        <div style="background-color: #ffffff; border-radius: 0 0 24px 24px; padding: 2rem; width: 100%;">
+          <div class="banner-grid" style="grid-template-columns: 1fr 1fr; gap: 1.5rem; width: 100%;">
+            <!-- Banner 1 -->
+            <div style="background-color: #f9f9f9; border: 2px dashed #ddd; border-radius: 12px; aspect-ratio: 2/1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem;">
+              <h2 class="seo-title" style="margin-bottom: 0.5rem; font-size: 1rem;">Promotional Banner</h2>
+              <div class="seo-content">
+                <p style="margin: 0; font-size: 0.875rem;">Under: Dimension 1400 by 700</p>
+              </div>
+            </div>
+            <!-- Banner 2 -->
+            <div style="background-color: #f9f9f9; border: 2px dashed #ddd; border-radius: 12px; aspect-ratio: 2/1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem;">
+              <h2 class="seo-title" style="margin-bottom: 0.5rem; font-size: 1rem;">Promotional Banner</h2>
+              <div class="seo-content">
+                <p style="margin: 0; font-size: 0.875rem;">Under: Dimension 1400 by 700</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEO Content Section -->
+    <section class="seo-content-section">
+      <div class="seo-container">
+        <h2>Your Trusted Destination for LG Electronics and Home Appliances in Nigeria</h2>
+        <div class="seo-content">
+          <p>
+            Discover the complete range of <strong>LG products in Nigeria</strong>, from high-performance Televisions to top-tier Home Appliances. We bring you authentic LG devices at competitive prices, ensuring you experience premium build quality and advanced technology. Whether you're upgrading your home theater, looking for a durable air conditioner, or outfitting your kitchen, our curated collection of LG devices has something for every need.
+          </p>
+          <p>
+            Transform your entertainment with <strong>LG OLED</strong> TVs that deliver stunning color accuracy and innovative displays. Paired with our collection of robust <strong>LG Soundbars</strong> and audio equipment, LG brings reliable hardware and industry-leading immersion to your living room.
+          </p>
+          <p>
+            Stay comfortable with LG's latest appliances like the <strong>InstaView Refrigerator</strong> and <strong>ArtCool Air Conditioners</strong>. LG offers unmatched performance with cutting-edge power efficiency, smart features, and ergonomic designs perfect for modern homes.
+          </p>
+          <p>
+            Shop with confidence knowing you're getting genuine LG products backed by manufacturer warranties and dedicated support. From everyday appliances to extreme entertainment setups, we are your one-stop destination for all your LG needs in Nigeria. Explore our exclusive deals on Konga and discover why families trust LG for innovation and durability.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Responsive Image Handler Script -->
+    <script>
+      // ============ Carousel Mobile Images Handler ============
+      // Function to update carousel mobile images when provided
+      function updateCarouselMobileImages() {
+        const slides = document.querySelectorAll('.slide');
+        slides.forEach((slide, index) => {
+          const picture = slide.querySelector('picture');
+          const mobileSrc = picture.getAttribute('data-mobile-src');
+          const source = picture.querySelector('source[media="(max-width: 768px)"]');
+          
+          if (mobileSrc && source) {
+            source.setAttribute('srcset', mobileSrc);
+            // Force browser to reload the picture element
+            const img = picture.querySelector('img');
+            img.srcset = ''; // Trigger picture element re-evaluation
+          }
+        });
+      }
+
+      // Example: How to set mobile URLs when available (user can call this)
+      window.setCarouselMobileImages = function(mobileSrcArray) {
+        const slides = document.querySelectorAll('.slide');
+        slides.forEach((slide, index) => {
+          if (mobileSrcArray[index]) {
+            const picture = slide.querySelector('picture');
+            picture.setAttribute('data-mobile-src', mobileSrcArray[index]);
+            updateCarouselMobileImages();
+          }
+        });
+      };
+
+      // Call on load and resize to handle responsive images
+      window.addEventListener('load', updateCarouselMobileImages);
+      window.addEventListener('resize', updateCarouselMobileImages);
+
+      // ============ Banner Carousel Auto-Cycle Handler ============
+      // Auto-cycle through banner carousel every 5 seconds
+      let currentBannerIndex = 1;
+      const bannerTotal = 6;
+      let bannerInterval;
+
+      function cycleBanner() {
+        currentBannerIndex = currentBannerIndex === bannerTotal ? 1 : currentBannerIndex + 1;
+        const radioButton = document.getElementById(`banner${currentBannerIndex}`);
+        if (radioButton) {
+          radioButton.checked = true;
+          // Trigger change event to ensure CSS updates
+          radioButton.dispatchEvent(new Event('change', { bubbles: true }));
+        }
+      }
+
+      function goToPreviousBanner() {
+        currentBannerIndex = currentBannerIndex === 1 ? bannerTotal : currentBannerIndex - 1;
+        const radioButton = document.getElementById(`banner${currentBannerIndex}`);
+        if (radioButton) {
+          radioButton.checked = true;
+          radioButton.dispatchEvent(new Event('change', { bubbles: true }));
+        }
+      }
+
+      function goToNextBanner() {
+        cycleBanner();
+      }
+
+      function startBannerCycle() {
+        bannerInterval = setInterval(cycleBanner, 5000); // 5 seconds per banner
+      }
+
+      function resetBannerCycle() {
+        clearInterval(bannerInterval);
+        startBannerCycle();
+      }
+
+      // Start the cycle on page load
+      window.addEventListener('load', startBannerCycle);
+
+      // Handle banner navigation arrows
+      const bannerContainer = document.querySelector('.banner-carousel-container');
+      if (bannerContainer) {
+        const prevArrow = bannerContainer.querySelector('.banner-prev');
+        const nextArrow = bannerContainer.querySelector('.banner-next');
+
+        if (prevArrow) {
+          prevArrow.addEventListener('click', (e) => {
+            e.preventDefault();
+            goToPreviousBanner();
+            resetBannerCycle();
+          });
+          // Remove the "for" attribute to prevent default radio behavior
+          prevArrow.removeAttribute('for');
+        }
+
+        if (nextArrow) {
+          nextArrow.addEventListener('click', (e) => {
+            e.preventDefault();
+            goToNextBanner();
+            resetBannerCycle();
+          });
+          // Remove the "for" attribute to prevent default radio behavior
+          nextArrow.removeAttribute('for');
+        }
+
+        // Reset cycle on pagination dot click
+        const bannerRadios = document.querySelectorAll('input[name="banner-carousel"]');
+        bannerRadios.forEach(radio => {
+          radio.addEventListener('change', () => {
+            currentBannerIndex = parseInt(radio.id.replace('banner', ''));
+            resetBannerCycle();
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
